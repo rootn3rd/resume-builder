@@ -9,6 +9,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Pankaj Chaurasia's resume</title>
@@ -60,6 +65,7 @@
         </div>
       </div>
       <div class="body">
+        <!-- work experience -->
         <div class="work-experience p-4">
           <div
             class="
@@ -139,6 +145,7 @@
           </div>
         </div>
 
+        <!-- Skills  -->
         <div class="skills p-4">
           <div
             class="
@@ -152,265 +159,25 @@
           >
             <p class="ml-10">Skills</p>
           </div>
-          <div
-            class="skill m-2 inline-block rounded-full py-3 px-6 bg-gray-200"
-          >
-            C#
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            ASP.NET
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            ASP.NET Core
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            Azure
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            Angular
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            .NET5
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            MSAL
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            SCSS
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            Docker
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            Reactive Programming
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            Agile
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            REST API
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            OpenID Connect
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            dotnetcore
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            MultiThreading
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            TPL
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            Windows Services
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            HTML
-          </div>
-          <div
-            class="
-              skill
-              ml-0
-              m-2
-              inline-block
-              rounded-full
-              py-3
-              px-6
-              bg-gray-200
-            "
-          >
-            CSS
+          <div class="skills-container p-4">
+            <div
+              class="
+                skill
+                m-2
+                inline-block
+                rounded-lg
+                py-2
+                px-4
+                bg-gray-500
+                text-white
+              "
+            >
+              placeholder
+            </div>
           </div>
         </div>
 
+        <!-- Certification -->
         <div class="certifications p-4">
           <div
             class="
@@ -424,22 +191,23 @@
           >
             <p class="ml-10">Certifications</p>
           </div>
-          <div class="certification">
-            <div class="title">
-              Microsoft Specialist: Programming in HTML5 with JavaScript and
-              CSS3
+          <div
+            class="
+              certifications-container
+              p-4
+              flex flex-wrap
+              items-stretch
+              place-content-between
+            "
+          >
+            <div class="certification p-2">
+              <div class="title font-medium">placeholder</div>
+              <div class="duration italic text-gray-500">placeholder</div>
             </div>
-            <div class="duration">03/2013-Present</div>
-          </div>
-          <div class="certification">
-            <div class="title">
-              Microsoft® Certified Technology Specialist: .NET Framework 4,
-              Windows Applications
-            </div>
-            <div class="duration">09/2012-Present</div>
           </div>
         </div>
 
+        <!-- Education -->
         <div class="education p-4">
           <div
             class="
@@ -453,22 +221,23 @@
           >
             <p class="ml-10">Education</p>
           </div>
-          <!-- Engineering -->
-          <div class="entry">
-            <div class="degree">
-              BE (Information Technology) (06/2009 - 06/2011)
+          <div
+            class="
+              education-container
+              p-4
+              flex flex-wrap
+              items-stretch
+              place-content-between
+            "
+          >
+            <div class="entry p-2">
+              <div class="degree font-medium">placeholder</div>
+              <div class="college italic text-gray-500">placeholder</div>
             </div>
-            <div class="college">KJ Somaiya College Of Engineering, Mumbai</div>
-          </div>
-          <!-- Junior college -->
-          <div class="entry">
-            <div class="degree">
-              Higher Secondary School (HSC) (06/2007 - 06/2009)
-            </div>
-            <div class="college">Kishinchand Chellaram College, Mumbai</div>
           </div>
         </div>
 
+        <!-- Languages -->
         <div class="languages p-4">
           <div
             class="
@@ -482,20 +251,25 @@
           >
             <p class="ml-10">Languages</p>
           </div>
-          <div class="language">
-            <div class="title">English</div>
-            <div class="proficiency">Full Professional Proficiency</div>
-          </div>
-          <div class="language">
-            <div class="title">Hindi</div>
-            <div class="proficiency">Native Proficiency</div>
-          </div>
-          <div class="language">
-            <div class="title">Marathi</div>
-            <div class="proficiency">Elementary Proficiency</div>
+          <div
+            class="
+              languages-container
+              p-4
+              flex flex-wrap
+              items-stretch
+              place-content-between
+            "
+          >
+            <div class="language p-2">
+              <div class="title font-medium">English</div>
+              <div class="proficiency italic text-gray-500">
+                Full Professional Proficiency
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Interests -->
         <div class="interests p-4">
           <div
             class="
@@ -507,12 +281,23 @@
               p-1
             "
           >
-            <p class="ml-10">Interest</p>
+            <p class="ml-10">Interests</p>
           </div>
-          <div class="interest">Music</div>
-          <div class="interest">Computer research</div>
-          <div class="interest">Reading</div>
-          <div class="interest">Binge watching</div>
+          <div class="interests-container p-4">
+            <div
+              class="
+                interest
+                m-2
+                inline-block
+                rounded-lg
+                py-2
+                px-4
+                border-2 border-gray-300
+              "
+            >
+              Placeholder!
+            </div>
+          </div>
         </div>
       </div>
     </div>
