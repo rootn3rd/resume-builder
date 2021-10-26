@@ -1,0 +1,16 @@
+.work-experience
+  .work-experience-container
+  .work-experience-entry
+  .detail
+  .projects
+  .module:last-child {
+  border-bottom: 0;
+}
+
+.work-experience
+  .work-experience-container
+  .work-experience-entry:last-child
+  .timeline
+  .lining {
+  visibility: hidden;
+}

@@ -138,9 +138,171 @@ $(() => {
     cloneObj.remove();
   };
 
+  const setupWorkExperience = () => {
+    const workex = [
+      {
+        company: 'Morgan Stanley',
+        title: 'Senior Manager',
+        duration: '07/2014 - Present',
+        location: 'Mumbai, India',
+
+        projects: [
+          {
+            title: 'Infrastructure Framework Development',
+            details: [
+              'This project is one of the Morgan Stanley enterprise wide initiative to adopt public cloud-base development which focuses on improving development productivity using cloud tools such as Microsoft Azure, Azure DevOps, Azure Test Manager, Pipelines etc. ',
+              'This engagement performing research and development on building cloud (Microsoft Azure) capability for .NET Core based applications, setting up core infrastructure to enable various cloud-based development within organization.',
+              'This includes identity management on cloud, service discovery, application monitoring, identity federation, integration with Microsoft ADAL and MSAL libraries for .net application to adopt Openid Connect.',
+            ],
+            technologies: [
+              'C#',
+              'ASP.NET',
+              'Azure',
+              'ASP.NET Core',
+              'MSAL',
+              'OAuth',
+              'OpenIDConnect',
+            ],
+          },
+          {
+            title: 'Realtime Debit Card transaction management',
+            details: [
+              'Windows service development that interfaces with external entity which delivers real time debit card transactions as an ISO8583 message. ',
+              'Implemented as a .NET service interfacing with external client to recieve notifications and then processs them in realtime to downstream systems.',
+            ],
+            technologies: [
+              'C#',
+              'Windows Services',
+              'XML',
+              'SQL',
+              'Socket Programming',
+            ],
+          },
+          {
+            title: 'Debit Card & Cheques Ordering System',
+            details: [
+              'Web application development (Angular, ngrx) that enables back office to place debit card orders and cheques. ',
+              'This provides CFA(s) a one-stop solution for handling new debit cards & cheque book orders.',
+            ],
+            technologies: [
+              'Angular',
+              'ngrx',
+              'HTML',
+              'CSS',
+              'Responsive web design',
+            ],
+          },
+          {
+            title: 'Stateful angular library for master-detail applications',
+            details: [
+              'Data sourced from a single backend database and then delivered to the passenger applications as an event that they can subscribe to, in order to fetch other relevant details helped passenger applications to be decoupled from the data delivery & mechanics of the library.',
+            ],
+            technologies: [
+              'Angular',
+              'ngrx',
+              'HTML',
+              'CSS',
+              'Responsive web design',
+            ],
+          },
+          ,
+          {
+            title: 'Desktop application development',
+            details: [
+              'Desktop application development (WPF) that hosts passenger applications used by financial advisors. This provides a unified view to the FA(s) & CSA(s) encompassing 300+ applications',
+              'Along with UI elements, this also required enabling server side (ASP.NET WebAPI(s)) & backend development (SQL) to ensure shared contextual information between applications',
+            ],
+            technologies: [
+              'C#',
+              'WPF',
+              'ASP.NET',
+              'SQL',
+              'Core Javascript',
+              'Prism',
+            ],
+          },
+        ],
+      },
+
+      {
+        id: 'company2',
+        company: 'Infosys Technologies',
+        title: 'Senior Systems Engineer',
+        duration: '08/2011 - 07/2014',
+        location: 'Pune, India',
+
+        projects: [
+          {
+            title: 'AssistEdge Product Suite',
+            details: [
+              'Design and implementation of UI automation product suite aimed at improving customer services',
+              'Integration of Managed Extensibility Framework (MEF) to support plugin based development',
+              'WPF UI re-design to conform to product requirements',
+            ],
+            technologies: ['C#', 'WPF', 'SQL', 'XML'],
+          },
+        ],
+      },
+    ];
+
+    const container = $('.work-experience .work-experience-container');
+    const cloneObj = $(
+      '.work-experience .work-experience-container .work-experience-entry'
+    );
+
+    let cloner = $(cloneObj);
+    let title = $(cloner.find('.detail > .title'));
+    let company = $(cloner.find('.detail > .company'));
+    let duration = $(cloner.find('.detail > .duration_location > .duration'));
+    let location = $(cloner.find('.detail > .duration_location > .location'));
+
+    workex.forEach((w) => {
+      title.text(w.title);
+      company.text(w.company);
+      duration.text(w.duration);
+      location.text(w.location);
+
+      let currentCompanyObj = cloneObj.clone();
+      currentCompanyObj.appendTo(container);
+
+      let projectsContainer = $(currentCompanyObj.find('.detail > .projects'));
+      let moduleObj = $(
+        currentCompanyObj.find('.detail > .projects > .module')
+      );
+
+      let moduleDetailTitle = $(
+        moduleObj.find('.module-details > .module-title')
+      );
+      let moduleDetailTech = $(moduleObj.find('.module-details > .tech'));
+
+      w.projects.forEach((p) => {
+        moduleDetailTitle.text(p.title);
+        moduleDetailTech.text('Technologies - ' + p.technologies.join(', '));
+
+        let customModuleObj = moduleObj.clone();
+        customModuleObj.appendTo(projectsContainer);
+
+        let moduleDetailContainer = $(
+          customModuleObj.find('.module-details > .details-container')
+        );
+        let moduleDetail = $(moduleDetailContainer.find('.detail'));
+        let moduleDetailText = $(moduleDetail.find('.text'));
+
+        p.details.forEach((d) => {
+          moduleDetailText.text(d);
+          moduleDetail.clone().appendTo(moduleDetailContainer);
+        });
+        moduleDetail.remove();
+      });
+      moduleObj.remove();
+    });
+    cloneObj.remove();
+  };
+
   setupSkills();
   setupInterests();
   setupLanguages();
   setupEducation();
   setupCertifications();
+  setupWorkExperience();
 });
